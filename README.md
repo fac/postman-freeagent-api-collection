@@ -10,4 +10,4 @@ Go to an endpoint in the collection (e.g: Company Details), then go to the auth 
 Then click Get new Access Token.
 
 
-### Please feel free to add new endpoints to this collection, then update the repo!
+### If you'd like to contribute - please clone the repo, import the collection, make any changes, and export the collection back into the repo folder as 'Collection v2.1'. Then branch the repo, and push to GitHub and create a PR.
