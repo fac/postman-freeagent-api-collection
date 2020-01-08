@@ -10,6 +10,7 @@ Go to an endpoint in the collection (e.g: Company Details), then go to the auth 
 Then click Get new Access Token.
 
 https://dev.staging.fre.ag/
+
 https://dev.freeagent.com/
 
 ----
