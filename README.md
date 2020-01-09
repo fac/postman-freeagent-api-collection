@@ -8,7 +8,9 @@ Import the FreeAgent collection, then import the environments.
 
 Fill in the environment variables for `client_id` and `client_secret` from your app, which you can create via our Developer Dashboard:
 
-- Developer Dashboard for Production & Sandbox:
+
+- Developer Dashboard for Production & Sandbox: 
+  - Make sure to set the OAuth Redirect URI to: `https://www.getpostman.com/oauth2/callback`
   - https://dev.freeagent.com
 
 
