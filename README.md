@@ -12,7 +12,7 @@ Fill in the environment variables for `client_id` and `client_secret` from your 
   - https://dev.freeagent.com
 
 
-Then authorise by going to a request, clicking the Auth tab, the link to the authorization helper, then 'Get New Access Token' and finally 'Request Token', signing in with an account for the appropriate environment.
+Then authorise by going to a request, for example `Company Details` clicking the `Auth` tab, the link to the authorization helper `FreeAgent`, then `Get New Access Token` and finally `Request Token`, signing in with an account for the appropriate environment.
 
 
 - FreeAgent App Signup for Production:
