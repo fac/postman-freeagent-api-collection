@@ -4,18 +4,21 @@ Please refer to the official FreeAgent API docs:
 https://dev.freeagent.com/docs
 
 ### Get Started
-Import the FreeAgent collection, then import the enviroment.
+Import the FreeAgent collection, then import the environments.
 
-Guide in this thread: https://discuss.fre.ag/t/postman-an-api-testing-tool/631/7
+Fill in the environment variables for `client_id` and `client_secret` from your app, which you can create via our Developer Dashboard:
 
-- Developer Dashboard for Production & Sandbox
+- Developer Dashboard for Production & Sandbox:
   - https://dev.freeagent.com
 
 
-- Signup for Production
+Then authorise by going to a request, clicking the Auth tab, the link to the authorization helper, then 'Get New Access Token' and finally 'Request Token', signing in with an account for the appropriate environment.
+
+
+- FreeAgent App Signup for Production:
   - https://signup.freeagent.com
 
-- Signup for Sandbox
+- FreeAgent App Signup for Sandbox:
   - https://signup.sandbox.freeagent.com
 
 ----
