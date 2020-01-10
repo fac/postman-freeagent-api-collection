@@ -10,7 +10,7 @@ Fill in the environment variables for `client_id` and `client_secret` from your 
 
 
 - Developer Dashboard for Production & Sandbox: 
-  - Make sure to set the OAuth Redirect URI to: `https://www.getpostman.com/oauth2/callback`
+  - Make sure to set the OAuth Redirect URI to: `https://www.getpostman.com/oauth2/callback` when creating your app on Dev Dashboard.
   - https://dev.freeagent.com
 
 
