@@ -3,7 +3,7 @@
 Please refer to the official FreeAgent API docs:
 https://dev.freeagent.com/docs
 
-### Get Started - [Video Guide](https://youtu.be/2M182E9Jtmo)
+### Get Started - [📺 Video Guide](https://youtu.be/2M182E9Jtmo)
 
 Import the FreeAgent collection, then import the environments.
 
