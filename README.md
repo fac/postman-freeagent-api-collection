@@ -17,7 +17,21 @@ Fill in the environment variables for `client_id` and `client_secret` from your 
 Then authorise by
 - going to a request, for example `Company Details`
 - clicking the `Auth` tab, the link to the authorization helper `FreeAgent`
-- then `Get New Access Token` 
+- Ensure `OAuth 2.0` is selected as the type
+- then `Get New Access Token`, and fill in this information:
+```
+Token Name: Your Token Name
+Grant Type: Authorization Code
+Callback URL: https://www.getpostman.com/oauth2/callback
+Auth URL: {{url}}/v2/approve_app
+Access Token URL: {{url}}/v2/token_endpoint
+Client ID: {{client_id}}
+Client Secret: {{client_secret}}
+Scope: -
+State: -
+Client Authentication: Send as Basic Auth Header
+````
+
 - and finally `Request Token`, signing in with an account for the appropriate environment.
 
 
