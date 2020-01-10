@@ -3,7 +3,8 @@
 Please refer to the official FreeAgent API docs:
 https://dev.freeagent.com/docs
 
-### Get Started
+### Get Started - [Video Guide](https://youtu.be/2M182E9Jtmo)
+
 Import the FreeAgent collection, then import the environments.
 
 Fill in the environment variables for `client_id` and `client_secret` from your app, which you can create via our Developer Dashboard:
