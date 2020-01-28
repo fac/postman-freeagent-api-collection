@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "bd310f58-3b13-4e89-9633-5e90a7eec531",
+		"_postman_id": "ced0c2f9-961c-4247-bfbb-94b7e1f66fff",
 		"name": "FreeAgent",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -237,7 +237,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{url}}/v2/bank_accounts",
+							"raw": "{{url}}/v2/bank_accounts?",
 							"host": [
 								"{{url}}"
 							],
@@ -828,7 +828,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{url}}/v2/bills",
+							"raw": "{{url}}/v2/bills?",
 							"host": [
 								"{{url}}"
 							],
@@ -2708,7 +2708,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{url}}/v2/invoices",
+							"raw": "{{url}}/v2/invoices?",
 							"host": [
 								"{{url}}"
 							],
@@ -3161,6 +3161,481 @@
 			"protocolProfileBehavior": {}
 		},
 		{
+			"name": "Credit Notes",
+			"item": [
+				{
+					"name": "Credit Note Transitions",
+					"item": [
+						{
+							"name": "Mark Credit Note as sent",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/v2/credit_notes/:id/transitions/mark_as_sent",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"v2",
+										"credit_notes",
+										":id",
+										"transitions",
+										"mark_as_sent"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "46"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Mark Credit Note as cancelled",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/v2/credit_notes/:id/transitions/mark_as_cancelled",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"v2",
+										"credit_notes",
+										":id",
+										"transitions",
+										"mark_as_cancelled"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "46"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Mark Credit Notes as draft",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/v2/credit_notes/:id/transitions/mark_as_draft",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"v2",
+										"credit_notes",
+										":id",
+										"transitions",
+										"mark_as_draft"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "46"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "List Credit Notes",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/v2/credit_notes?",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v2",
+								"credit_notes"
+							],
+							"query": [
+								{
+									"key": "contact",
+									"value": "{{url}}/v2/contacts/:id",
+									"disabled": true
+								},
+								{
+									"key": "project",
+									"value": "{{url}}/v2/projects/:id",
+									"disabled": true
+								},
+								{
+									"key": "currency",
+									"value": "USD",
+									"disabled": true
+								},
+								{
+									"key": "view",
+									"value": "all",
+									"disabled": true
+								},
+								{
+									"key": "view",
+									"value": "recent_open_or_overdue",
+									"disabled": true
+								},
+								{
+									"key": "view",
+									"value": "open",
+									"disabled": true
+								},
+								{
+									"key": "view",
+									"value": "overdue",
+									"disabled": true
+								},
+								{
+									"key": "view",
+									"value": "open_or_overdue",
+									"disabled": true
+								},
+								{
+									"key": "view",
+									"value": "draft",
+									"disabled": true
+								},
+								{
+									"key": "view",
+									"value": "last_N_months",
+									"disabled": true
+								},
+								{
+									"key": "updated_since",
+									"value": "2018-01-01",
+									"disabled": true
+								},
+								{
+									"key": "sort",
+									"value": "updated_at",
+									"disabled": true
+								},
+								{
+									"key": "sort",
+									"value": "created_at",
+									"disabled": true
+								},
+								{
+									"key": "nested_credit_note_items",
+									"value": "true",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show Credit Note",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/v2/credit_notes/:id",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v2",
+								"credit_notes",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Credit Note",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"credit_note\": {\n        \"contact\": \"{{url}}/v2/contacts/43\",\n        \"dated_on\": \"2020-02-01\",\n        \"due_on\": \"2019-09-18\",\n        \"currency\": \"GBP\",\n        \"omit_header\": false,\n        \"always_show_bic_and_iban\": false,\n        \"payment_terms_in_days\": 30,\n        \"credit_note_items\": [{\"description\": \"Credit Note Item 1\", \"price\": -100, \"quantity\": 3}]\n    }\n}"
+						},
+						"url": {
+							"raw": "{{url}}/v2/credit_notes",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v2",
+								"credit_notes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Credit Note",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"credit_note\": {\n        \"comments\": \"An example of some additional text.\",\n        \"credit_note_items\": [{\"description\": \"New invoice item\"}]\n    }\n}"
+						},
+						"url": {
+							"raw": "{{url}}/v2/credit_notes/:id",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v2",
+								"credit_notes",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "44"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show Credit Note as PDF",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/v2/credit_notes/:id/pdf",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v2",
+								"credit_notes",
+								":id",
+								"pdf"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Credit Notes",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{url}}/v2/credit_notes/:id",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v2",
+								"credit_notes",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "44"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Send Credit Note Email",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"credit_note\": {\n        \"email\": {\n            \"to\": \"Test Contact <test_contact@example.com>\",\n            \"from\": \"Our Company <us@company.com>\",\n            \"subject\": \"Testing\",\n            \"body\": \"Bison bison bison bison bison Bison bison\"\n        }\n    }\n}"
+						},
+						"url": {
+							"raw": "{{url}}/v2/credit_notes/:id/send_email",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v2",
+								"credit_notes",
+								":id",
+								"send_email"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "46"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
 			"name": "Journal Sets",
 			"item": [
 				{
@@ -3182,7 +3657,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{url}}/v2/journal_sets",
+							"raw": "{{url}}/v2/journal_sets?",
 							"host": [
 								"{{url}}"
 							],
@@ -3401,7 +3876,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/v2/notes",
+							"raw": "{{url}}/v2/notes?",
 							"host": [
 								"{{url}}"
 							],
@@ -3910,7 +4385,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{url}}/v2/recurring_invoices",
+							"raw": "{{url}}/v2/recurring_invoices?",
 							"host": [
 								"{{url}}"
 							],
@@ -4850,7 +5325,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{url}}/v2/accounting/trial_balance/summary",
+							"raw": "{{url}}/v2/accounting/trial_balance/summary?",
 							"host": [
 								"{{url}}"
 							],
