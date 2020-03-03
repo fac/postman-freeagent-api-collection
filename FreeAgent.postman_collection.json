@@ -444,7 +444,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{url}}/v2/bank_transaction_explanations",
+							"raw": "{{url}}/v2/bank_transaction_explanations?",
 							"host": [
 								"{{url}}"
 							],
@@ -653,7 +653,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{url}}/v2/bank_transactions",
+							"raw": "{{url}}/v2/bank_transactions?",
 							"host": [
 								"{{url}}"
 							],
