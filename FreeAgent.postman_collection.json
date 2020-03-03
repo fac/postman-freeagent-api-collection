@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "bd310f58-3b13-4e89-9633-5e90a7eec531",
+		"_postman_id": "2307ee92-1051-4e32-a448-fa3b8432106b",
 		"name": "FreeAgent",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -444,7 +444,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{url}}/v2/bank_transaction_explanations?",
+							"raw": "{{url}}/v2/bank_transaction_explanations",
 							"host": [
 								"{{url}}"
 							],
@@ -653,7 +653,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{url}}/v2/bank_transactions?",
+							"raw": "{{url}}/v2/bank_transactions",
 							"host": [
 								"{{url}}"
 							],
@@ -5131,6 +5131,81 @@
 						}
 					},
 					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Consents",
+			"item": [
+				{
+					"name": "Handle pending banking provider consent",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "accessToken",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "tokenType",
+									"value": "bearer",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/v2/consents/callback?",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v2",
+								"consents",
+								"callback"
+							]
+						},
+						"description": "This endpoint is currently used by the mobile app to handle a pending consent for a provider integration (the main app has its own internal controller). The basic flow is as follows: The user searches for their bank in the app and chooses to start the integration process (starting a callback). After providing their username/password/other login credentials, the user's device is given an authorisation code. This code is exchanged for a access token, which is used by Freeagent for authorisation when asking for transactions or other user details from a bank. When exiting the banks portal, we post the details of the consent to this endpoint in the URL params.\n\nThe consent details are only valid for 10 minutes max so will fail if used in the URL params after they have expired."
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "7e9dcf2e-45ae-4313-9113-8d34b2e02ff1",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "b9454c8e-358f-4c3a-92f8-372f895b89d0",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
 				}
 			],
 			"protocolProfileBehavior": {}
