@@ -1,10 +1,80 @@
 {
 	"info": {
-		"_postman_id": "27527c09-27b3-4664-a2de-e5e0c73c378b",
+		"_postman_id": "104cad67-c029-4f7e-8718-c7ae622ef7cd",
 		"name": "FreeAgent",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
+		{
+			"name": "_Authorization",
+			"item": [
+				{
+					"name": "Refresh access token",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "577ce26c-1111-4ba0-945e-a27fbf08d5d6",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "oauth2"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "grant_type",
+									"value": "refresh_token",
+									"description": "The type of request being made, in this case a refresh request."
+								},
+								{
+									"key": "client_id",
+									"value": "{{client_id}}",
+									"description": "The client ID of the application requesting to refresh the token."
+								},
+								{
+									"key": "client_secret",
+									"value": "{{client_secret}}",
+									"description": "The client secret of the application requesting to refresh the token."
+								},
+								{
+									"key": "refresh_token",
+									"value": "",
+									"description": "The refresh token to refresh."
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/v2/token_endpoint",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v2",
+								"token_endpoint"
+							]
+						},
+						"description": "Request an new Access Token using an existing Refresh Token (you'll need to provide a Refresh Token in the request body params)\n\nhttps://dev.freeagent.com/docs/oauth/#refreshing-the-access-token"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
 		{
 			"name": "Accountancy Practice API",
 			"item": [
@@ -113,7 +183,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "05cb597c-3b59-4169-8ce1-5d126ce68f35",
+						"id": "799be50c-8d65-4a2d-8dde-fdeb76f4550a",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -123,7 +193,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "e399195b-1a8b-4f21-8ec3-d4938f7a4779",
+						"id": "360ae2be-9fb7-4ec6-af89-986843d4a87f",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -1424,7 +1494,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "785723e4-aae1-4e16-99ff-d750e4825221",
+						"id": "d8fcbe90-72d0-4fdb-be3a-f50c88f164b7",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -1434,7 +1504,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "9f60ae95-3dff-42ca-bb43-e1e51d747163",
+						"id": "6f4b1ede-3b5e-456c-af96-81e54cc46aa5",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -2152,7 +2222,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "bf3e1962-8ead-4dc6-ab59-c92fb4009251",
+						"id": "f5eb15e1-64b4-431c-9922-bc3bc583047a",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -2162,7 +2232,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "aeaa4831-a4c2-44b1-b507-1f10f8cefaf2",
+						"id": "d227fb1f-5f30-47af-a399-2e62c656e4a2",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -5635,7 +5705,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "811452b5-b1fc-4506-9cba-2661794eda21",
+				"id": "48e6528c-2d11-43d8-a801-a80f32a73d8b",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -5645,7 +5715,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "d8136015-2ac6-4083-a71e-ce3e4bf9cff7",
+				"id": "b19b0b70-ec82-44f6-bed7-67a7413e9865",
 				"type": "text/javascript",
 				"exec": [
 					""
