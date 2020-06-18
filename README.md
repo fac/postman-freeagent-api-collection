@@ -55,7 +55,7 @@ You can set up a [pre-request script](https://learning.postman.com/docs/postman/
 let tokenTimestamp = pm.variables.get("oauth_timestamp");
 let tokenDate = Date.parse(tokenTimestamp);
 
-if !(tokenDate) {
+if (!tokenDate) {
   tokenDate = new Date(2020, 5, 14);// set tokenDate to an arbitrary date in the past to ensure token is refreshed if the "oauth_timestamp" variable isn't set
 }
 
