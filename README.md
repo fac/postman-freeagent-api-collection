@@ -51,7 +51,7 @@ You can set up a [pre-request script](https://learning.postman.com/docs/postman/
 - Open the **Pre-request Scripts** tab and paste in the contents of [auto_refresh_script.js](./auto_refresh_script.js)
 - Click **Update** to save
 - You'll now have to set up a few environment variables, which you can do by clicking on the eye symbol next to the
-environment dropdown in the top-left corner. For each FreeAgent environment you have set up, ensure you have the following variables:
+environment dropdown in the top-left corner of the Postman app. For each FreeAgent environment you have set up, ensure you have the following variables:
 
   - `client_id` - your app's OAuth identifier from your Developer Dashboard account
   - `client_secret` - your app's OAuth secret from your Developer Dashboard account
