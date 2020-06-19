@@ -29,7 +29,6 @@ if ((new Date() - tokenDate) >= expiresInTime) {
   pm.sendRequest(refreshAccessTokenRequest, function (err, res) {
     if (err) {
       console.error(err)
-      console.error("Ensure you have the client_id, client_secret, token_url and refresh_token set as environment variables.")
       return;
     }
 
@@ -39,6 +38,8 @@ if ((new Date() - tokenDate) >= expiresInTime) {
       pm.environment.set("refresh_token", response.refresh_token);
       pm.environment.set("expires_in", (response.expires_in * 1000));
       pm.environment.set("oauth_timestamp", new Date());
+    } else {
+      console.error("Ensure you have the client_id, client_secret, token_url and refresh_token set as environment variables.")
     }
   });
 }
