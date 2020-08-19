@@ -35,7 +35,7 @@ Client Authentication: Send as Basic Auth Header
 
 - and finally `Request Token`, signing in with an account for the appropriate environment.
 
-###Common Gotchas
+### Common Gotchas
 If your attempt to obtain an access token fails with the `"HTTP Basic: Access denied."` error, check your environment file and ensure the `client_id` and `client_secret` are entered correctly and don't contain any trailing whitespace/newline characters.
 
 - FreeAgent App Signup for Production:
