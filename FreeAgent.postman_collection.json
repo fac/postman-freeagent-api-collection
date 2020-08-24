@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "104cad67-c029-4f7e-8718-c7ae622ef7cd",
+		"_postman_id": "3239c800-039b-4066-8f9a-b506700253cf",
 		"name": "FreeAgent",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -14,7 +14,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "577ce26c-1111-4ba0-945e-a27fbf08d5d6",
+								"id": "852f96db-ff50-42d0-95e9-884f74ff5223",
 								"exec": [
 									""
 								],
@@ -183,7 +183,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "799be50c-8d65-4a2d-8dde-fdeb76f4550a",
+						"id": "68d3a4f9-bf86-49b3-a5b8-f15a33e30933",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -193,7 +193,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "360ae2be-9fb7-4ec6-af89-986843d4a87f",
+						"id": "2a93827e-4427-410d-a8cd-644caad9c464",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -1184,13 +1184,20 @@
 							}
 						],
 						"url": {
-							"raw": "{{url}}/v2/capital_assets",
+							"raw": "{{url}}/v2/capital_assets?include_history=true",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
 								"v2",
 								"capital_assets"
+							],
+							"query": [
+								{
+									"key": "include_history",
+									"value": "true",
+									"description": "Retrieves information about events in the capital asset life cycle (such as purchase, depreciation, and disposal)."
+								}
 							]
 						}
 					},
@@ -1215,13 +1222,103 @@
 							}
 						],
 						"url": {
-							"raw": "{{url}}/v2/capital_assets",
+							"raw": "{{url}}/v2/capital_assets/:id/?include_history=true",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
 								"v2",
-								"capital_assets"
+								"capital_assets",
+								":id",
+								""
+							],
+							"query": [
+								{
+									"key": "include_history",
+									"value": "true",
+									"description": "Retrieves information about events in the capital asset life cycle (such as purchase, depreciation, and disposal)."
+								}
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Capital Asset Types",
+			"item": [
+				{
+					"name": "List all capital asset types",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/v2/capital_asset_types",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v2",
+								"capital_asset_types"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get a single capital asset type",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/v2/capital_asset_types/:id",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v2",
+								"capital_asset_types",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								}
 							]
 						}
 					},
@@ -1494,7 +1591,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "d8fcbe90-72d0-4fdb-be3a-f50c88f164b7",
+						"id": "ad2850cb-dc55-470d-a97b-299ce87bd9a8",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -1504,7 +1601,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "6f4b1ede-3b5e-456c-af96-81e54cc46aa5",
+						"id": "4512b5c2-e4b9-4de2-9cd0-4d3ebb44d25b",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -2184,6 +2281,246 @@
 			"protocolProfileBehavior": {}
 		},
 		{
+			"name": "Credit Note Reconciliations",
+			"item": [
+				{
+					"name": "List Credit Note Reconciliations",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/v2/credit_note_reconciliations",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v2",
+								"credit_note_reconciliations"
+							],
+							"query": [
+								{
+									"key": "updated_since",
+									"value": "2018-01-01",
+									"disabled": true
+								},
+								{
+									"key": "from_date",
+									"value": "2020-07-01",
+									"disabled": true
+								},
+								{
+									"key": "to_date",
+									"value": "2020-08-24",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show Credit Note Reconciliation",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/v2/credit_note_reconciliations/:id",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v2",
+								"credit_note_reconciliations",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Credit Note Reconciliation",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"credit_note_reconciliation\":\n  {\n    \"gross_value\": \"100.0\",\n    \"dated_on\": \"2020-08-10\",\n    \"currency\": \"GBP\",\n    \"exchange_rate\":\"1.0\",\n    \"invoice\":\"{{url}}/v2/invoices/1\",\n    \"credit_note\":\"{{url}}/v2/credit_notes/2\"\n  }\n}"
+						},
+						"url": {
+							"raw": "{{url}}/v2/credit_note_reconciliations",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v2",
+								"credit_note_reconciliations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Credit Note Reconciliation",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"credit_note_reconciliation\":\n  {\n    \"gross_value\": \"120.0\"\n  }\n}"
+						},
+						"url": {
+							"raw": "{{url}}/v2/credit_note_reconciliations/:id",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v2",
+								"credit_note_reconciliations",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Credit Note Reconciliation",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/v2/credit_note_reconciliations/:id",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v2",
+								"credit_note_reconciliations",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "aad7a068-b0ef-4178-b321-3a37e7b9533e",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "b13fa1de-f35a-4230-a335-7566c626e0d6",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
 			"name": "Email Addresses",
 			"item": [
 				{
@@ -2222,7 +2559,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "f5eb15e1-64b4-431c-9922-bc3bc583047a",
+						"id": "90cff386-c6ed-4f37-b941-64596ba7a34a",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -2232,7 +2569,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "d227fb1f-5f30-47af-a399-2e62c656e4a2",
+						"id": "012ba4b5-9d4b-4a4a-b03f-6053263715b1",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -4309,6 +4646,12 @@
 									"key": "contact",
 									"value": "{{url}}/v2/contacts/:id",
 									"disabled": true
+								},
+								{
+									"key": "nested",
+									"value": "true",
+									"description": "Retrieves contact's details as nested JSON objects rather than URL references.",
+									"disabled": true
 								}
 							]
 						}
@@ -4378,6 +4721,14 @@
 								"projects",
 								":id"
 							],
+							"query": [
+								{
+									"key": "nested",
+									"value": "true",
+									"description": "Retrieves contact's details as nested JSON objects rather than URL references.",
+									"disabled": true
+								}
+							],
 							"variable": [
 								{
 									"key": "id",
@@ -4409,6 +4760,40 @@
 						"body": {
 							"mode": "formdata",
 							"formdata": []
+						},
+						"url": {
+							"raw": "{{url}}/v2/projects/:id",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v2",
+								"projects",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Project",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"project\": {\n        \"name\": \"Website Redesign\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
 						},
 						"url": {
 							"raw": "{{url}}/v2/projects/:id",
@@ -5078,6 +5463,14 @@
 										":id",
 										"timer"
 									],
+									"query": [
+										{
+											"key": "nested",
+											"value": "true",
+											"description": "Retrieves full details of resources associated with the timeslip(s) - such as user, project, task - as nested JSON objects rather than URL references.",
+											"disabled": true
+										}
+									],
 									"variable": [
 										{
 											"key": "id",
@@ -5120,6 +5513,14 @@
 										"timeslips",
 										":id",
 										"timer"
+									],
+									"query": [
+										{
+											"key": "nested",
+											"value": "true",
+											"description": "Retrieves full details of resources associated with the timeslip(s) - such as user, project, task - as nested JSON objects rather than URL references.",
+											"disabled": true
+										}
 									],
 									"variable": [
 										{
@@ -5207,6 +5608,12 @@
 									"key": "project",
 									"value": "{{url}}/v2/projects/:id",
 									"disabled": true
+								},
+								{
+									"key": "nested",
+									"value": "true",
+									"description": "Retrieves full details of resources associated with the timeslip(s) - such as user, project, task - as nested JSON objects rather than URL references.",
+									"disabled": true
 								}
 							]
 						}
@@ -5240,6 +5647,14 @@
 								"v2",
 								"timeslips",
 								":id"
+							],
+							"query": [
+								{
+									"key": "nested",
+									"value": "true",
+									"description": "Retrieves full details of resources associated with the timeslip(s) - such as user, project, task - as nested JSON objects rather than URL references.",
+									"disabled": true
+								}
 							],
 							"variable": [
 								{
@@ -5281,6 +5696,14 @@
 							"path": [
 								"v2",
 								"timeslips"
+							],
+							"query": [
+								{
+									"key": "nested",
+									"value": "true",
+									"description": "Retrieves full details of resources associated with the timeslip(s) - such as user, project, task - as nested JSON objects rather than URL references.",
+									"disabled": true
+								}
 							]
 						}
 					},
@@ -5309,7 +5732,7 @@
 							"raw": "{\n    \"timeslip\": {\n        \"user\": \"https://api.freeagent.com/v2/users/1\",\n        \"project\": \"https://api.freeagent.com/v2/projects/1\",\n        \"task\": \"https://api.freeagent.com/v2/tasks/1\",\n        \"dated_on\": \"2011-08-15\",\n        \"hours\": \"12.0\"\n    }\n}"
 						},
 						"url": {
-							"raw": "{{url}}/v2/timeslips/:id",
+							"raw": "{{url}}/v2/timeslips/:id?nested=true",
 							"host": [
 								"{{url}}"
 							],
@@ -5317,6 +5740,13 @@
 								"v2",
 								"timeslips",
 								":id"
+							],
+							"query": [
+								{
+									"key": "nested",
+									"value": "true",
+									"description": "Retrieves full details of resources associated with the timeslip(s) - such as user, project, task - as nested JSON objects rather than URL references."
+								}
 							],
 							"variable": [
 								{
@@ -5705,7 +6135,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "48e6528c-2d11-43d8-a801-a80f32a73d8b",
+				"id": "f716e360-4ba3-4736-a789-617baf94bb46",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -5715,7 +6145,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "b19b0b70-ec82-44f6-bed7-67a7413e9865",
+				"id": "513daba0-ffc9-4272-984d-03d072b33e23",
 				"type": "text/javascript",
 				"exec": [
 					""
