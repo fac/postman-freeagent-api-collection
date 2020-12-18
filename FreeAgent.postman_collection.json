@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "3239c800-039b-4066-8f9a-b506700253cf",
+		"_postman_id": "a14df294-99a2-44fa-b3b4-429cc5476e63",
 		"name": "FreeAgent",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -14,7 +14,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "852f96db-ff50-42d0-95e9-884f74ff5223",
+								"id": "f0503583-e55e-45a3-b1b7-e8f4c32fbfaf",
 								"exec": [
 									""
 								],
@@ -183,7 +183,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "68d3a4f9-bf86-49b3-a5b8-f15a33e30933",
+						"id": "4bbf80a2-df9a-46b4-b498-5ea09dd03c2a",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -193,7 +193,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "2a93827e-4427-410d-a8cd-644caad9c464",
+						"id": "cc1a4251-dd40-4263-9e12-ea418311e209",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -1323,6 +1323,121 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Create capital asset type",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"capital_asset_type\": {\n        \"name\": \"Spaceships\"\n    }\n}"
+						},
+						"url": {
+							"raw": "{{url}}/v2/capital_asset_types",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v2",
+								"capital_asset_types"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update capital asset type",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"capital_asset_type\": {\n        \"name\": \"Spaceships\"\n    }\n}"
+						},
+						"url": {
+							"raw": "{{url}}/v2/capital_asset_types/:id",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v2",
+								"capital_asset_types",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete capital asset type",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/v2/capital_asset_types/:id",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v2",
+								"capital_asset_types",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
 				}
 			],
 			"protocolProfileBehavior": {}
@@ -1442,6 +1557,141 @@
 								{
 									"key": "nominal_code",
 									"value": "001"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create category",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"category\": {\n    \"description\": \"Custom Admin Expenses Category\",\n    \"nominal_code\": \"212\",\n    \"tax_reporting_name\": \"computer_software_costs\",\n    \"allowable_for_tax\": true,\n    \"auto_sales_tax_rate\": \"Standard rate\",\n    \"category_group\": \"admin_expenses\"\n  }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v2/categories",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v2",
+								"categories"
+							]
+						},
+						"description": "Documentation: https://dev.freeagent.com/docs/categories#create-a-category"
+					},
+					"response": []
+				},
+				{
+					"name": "Update category",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"category\": {\n    \"description\": \"Updated Category Name\",\n    \"nominal_code\": \"213\",\n    \"tax_reporting_name\": \"business_entertaining\",\n    \"allowable_for_tax\": true,\n    \"auto_sales_tax_rate\": \"Standard rate\"\n  }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v2/categories/:nominal_code",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v2",
+								"categories",
+								":nominal_code"
+							],
+							"variable": [
+								{
+									"key": "nominal_code",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete category",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/v2/categories/:nominal_code",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v2",
+								"categories",
+								":nominal_code"
+							],
+							"variable": [
+								{
+									"key": "nominal_code",
+									"value": ""
 								}
 							]
 						}
@@ -1591,7 +1841,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "ad2850cb-dc55-470d-a97b-299ce87bd9a8",
+						"id": "82d2242a-4c7d-43ec-bc49-88ec283ee1a6",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -1601,7 +1851,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "4512b5c2-e4b9-4de2-9cd0-4d3ebb44d25b",
+						"id": "081adc04-4419-482c-9b9f-783b243dcae0",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -2500,7 +2750,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "aad7a068-b0ef-4178-b321-3a37e7b9533e",
+						"id": "a8035a25-cd29-4d30-ab03-a332bfd5fafa",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -2510,7 +2760,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "b13fa1de-f35a-4230-a335-7566c626e0d6",
+						"id": "43cd0204-92ce-4171-aaca-86b1e3073726",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -2559,7 +2809,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "90cff386-c6ed-4f37-b941-64596ba7a34a",
+						"id": "7a322984-30c9-4dac-b194-b1c3dfc38170",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -2569,7 +2819,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "012ba4b5-9d4b-4a4a-b03f-6053263715b1",
+						"id": "ac6ec821-b99f-4a86-96c7-3d1caa007304",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -6135,7 +6385,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "f716e360-4ba3-4736-a789-617baf94bb46",
+				"id": "a760280f-3c96-412c-a1df-84982cbffe42",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -6145,7 +6395,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "513daba0-ffc9-4272-984d-03d072b33e23",
+				"id": "acea3d0d-8c44-4b32-bf74-4f98245d3107",
 				"type": "text/javascript",
 				"exec": [
 					""
