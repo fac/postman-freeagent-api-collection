@@ -10,7 +10,7 @@ Import the FreeAgent collection, then import the environments.
 Fill in the environment variables for `client_id` and `client_secret` from your app, which you can create via our Developer Dashboard:
 
 
-- Developer Dashboard for Production & Sandbox: 
+- Developer Dashboard for Production & Sandbox:
   - Make sure to set the OAuth Redirect URI to: `https://www.getpostman.com/oauth2/callback` when creating your app on Dev Dashboard.
   - https://dev.freeagent.com
 
@@ -19,7 +19,7 @@ Then authorise by
 - going to a request, for example `Company Details`
 - clicking the `Auth` tab, the link to the authorization helper `FreeAgent`
 - Ensure `OAuth 2.0` is selected as the type
-- then `Get New Access Token`, and fill in this information:
+- then fill in this information:
 ```
 Token Name: Your Token Name
 Grant Type: Authorization Code
@@ -32,8 +32,8 @@ Scope: -
 State: -
 Client Authentication: Send as Basic Auth Header
 ```
-
-- and finally `Request Token`, signing in with an account for the appropriate environment.
+- click `Get New Access Token`, signing in with an account for the appropriate environment, then click `Proceed`
+- and finally `Use Token`.
 
 #### Common Gotchas
 If your attempt to obtain an access token fails with the `"HTTP Basic: Access denied."` error, check your environment file and ensure the `client_id` and `client_secret` are entered correctly and don't contain any trailing whitespace/newline characters.
