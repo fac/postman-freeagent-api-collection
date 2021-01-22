@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "a14df294-99a2-44fa-b3b4-429cc5476e63",
+		"_postman_id": "490be926-6926-48ab-8d95-e2e3d3400648",
 		"name": "FreeAgent",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -14,7 +14,6 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "f0503583-e55e-45a3-b1b7-e8f4c32fbfaf",
 								"exec": [
 									""
 								],
@@ -72,8 +71,7 @@
 					},
 					"response": []
 				}
-			],
-			"protocolProfileBehavior": {}
+			]
 		},
 		{
 			"name": "Accountancy Practice API",
@@ -183,7 +181,6 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "4bbf80a2-df9a-46b4-b498-5ea09dd03c2a",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -193,15 +190,13 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "cc1a4251-dd40-4263-9e12-ea418311e209",
 						"type": "text/javascript",
 						"exec": [
 							""
 						]
 					}
 				}
-			],
-			"protocolProfileBehavior": {}
+			]
 		},
 		{
 			"name": "Attachments",
@@ -282,8 +277,7 @@
 					},
 					"response": []
 				}
-			],
-			"protocolProfileBehavior": {}
+			]
 		},
 		{
 			"name": "Bank Accounts",
@@ -489,8 +483,7 @@
 					},
 					"response": []
 				}
-			],
-			"protocolProfileBehavior": {}
+			]
 		},
 		{
 			"name": "Bank Transaction Explanations",
@@ -698,8 +691,7 @@
 					},
 					"response": []
 				}
-			],
-			"protocolProfileBehavior": {}
+			]
 		},
 		{
 			"name": "Bank Transactions",
@@ -873,8 +865,7 @@
 					},
 					"response": []
 				}
-			],
-			"protocolProfileBehavior": {}
+			]
 		},
 		{
 			"name": "Bills",
@@ -1159,8 +1150,7 @@
 					},
 					"response": []
 				}
-			],
-			"protocolProfileBehavior": {}
+			]
 		},
 		{
 			"name": "Capital Assets",
@@ -1249,8 +1239,7 @@
 					},
 					"response": []
 				}
-			],
-			"protocolProfileBehavior": {}
+			]
 		},
 		{
 			"name": "Capital Asset Types",
@@ -1439,8 +1428,7 @@
 					},
 					"response": []
 				}
-			],
-			"protocolProfileBehavior": {}
+			]
 		},
 		{
 			"name": "Cashflow",
@@ -1488,8 +1476,7 @@
 					},
 					"response": []
 				}
-			],
-			"protocolProfileBehavior": {}
+			]
 		},
 		{
 			"name": "Categories",
@@ -1698,8 +1685,7 @@
 					},
 					"response": []
 				}
-			],
-			"protocolProfileBehavior": {}
+			]
 		},
 		{
 			"name": "CIS Bands",
@@ -1735,8 +1721,7 @@
 					},
 					"response": []
 				}
-			],
-			"protocolProfileBehavior": {}
+			]
 		},
 		{
 			"name": "Company",
@@ -1841,7 +1826,6 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "82d2242a-4c7d-43ec-bc49-88ec283ee1a6",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -1851,15 +1835,13 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "081adc04-4419-482c-9b9f-783b243dcae0",
 						"type": "text/javascript",
 						"exec": [
 							""
 						]
 					}
 				}
-			],
-			"protocolProfileBehavior": {}
+			]
 		},
 		{
 			"name": "Contacts",
@@ -2052,8 +2034,7 @@
 					},
 					"response": []
 				}
-			],
-			"protocolProfileBehavior": {}
+			]
 		},
 		{
 			"name": "Credit Notes",
@@ -2181,9 +2162,7 @@
 							},
 							"response": []
 						}
-					],
-					"protocolProfileBehavior": {},
-					"_postman_isSubFolder": true
+					]
 				},
 				{
 					"name": "List Credit Notes",
@@ -2527,8 +2506,7 @@
 					},
 					"response": []
 				}
-			],
-			"protocolProfileBehavior": {}
+			]
 		},
 		{
 			"name": "Credit Note Reconciliations",
@@ -2750,7 +2728,6 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "a8035a25-cd29-4d30-ab03-a332bfd5fafa",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -2760,15 +2737,13 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "43cd0204-92ce-4171-aaca-86b1e3073726",
 						"type": "text/javascript",
 						"exec": [
 							""
 						]
 					}
 				}
-			],
-			"protocolProfileBehavior": {}
+			]
 		},
 		{
 			"name": "Email Addresses",
@@ -2809,7 +2784,6 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "7a322984-30c9-4dac-b194-b1c3dfc38170",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -2819,15 +2793,13 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "ac6ec821-b99f-4a86-96c7-3d1caa007304",
 						"type": "text/javascript",
 						"exec": [
 							""
 						]
 					}
 				}
-			],
-			"protocolProfileBehavior": {}
+			]
 		},
 		{
 			"name": "Estimates",
@@ -2995,9 +2967,7 @@
 							},
 							"response": []
 						}
-					],
-					"protocolProfileBehavior": {},
-					"_postman_isSubFolder": true
+					]
 				},
 				{
 					"name": "Estimates Items",
@@ -3121,9 +3091,7 @@
 							},
 							"response": []
 						}
-					],
-					"protocolProfileBehavior": {},
-					"_postman_isSubFolder": true
+					]
 				},
 				{
 					"name": "List Estimates",
@@ -3429,8 +3397,7 @@
 					},
 					"response": []
 				}
-			],
-			"protocolProfileBehavior": {}
+			]
 		},
 		{
 			"name": "Expenses",
@@ -3648,8 +3615,7 @@
 					},
 					"response": []
 				}
-			],
-			"protocolProfileBehavior": {}
+			]
 		},
 		{
 			"name": "Invoices",
@@ -3817,9 +3783,7 @@
 							},
 							"response": []
 						}
-					],
-					"protocolProfileBehavior": {},
-					"_postman_isSubFolder": true
+					]
 				},
 				{
 					"name": "List Invoices",
@@ -4289,8 +4253,7 @@
 					},
 					"response": []
 				}
-			],
-			"protocolProfileBehavior": {}
+			]
 		},
 		{
 			"name": "Journal Sets",
@@ -4521,8 +4484,7 @@
 					},
 					"response": []
 				}
-			],
-			"protocolProfileBehavior": {}
+			]
 		},
 		{
 			"name": "Notes",
@@ -4722,8 +4684,7 @@
 					},
 					"response": []
 				}
-			],
-			"protocolProfileBehavior": {}
+			]
 		},
 		{
 			"name": "Payroll",
@@ -4783,8 +4744,7 @@
 					},
 					"response": []
 				}
-			],
-			"protocolProfileBehavior": {}
+			]
 		},
 		{
 			"name": "Price List Items",
@@ -4832,8 +4792,7 @@
 					},
 					"response": []
 				}
-			],
-			"protocolProfileBehavior": {}
+			]
 		},
 		{
 			"name": "Profit & Loss",
@@ -4858,8 +4817,7 @@
 					},
 					"response": []
 				}
-			],
-			"protocolProfileBehavior": {}
+			]
 		},
 		{
 			"name": "Projects",
@@ -5065,8 +5023,7 @@
 					},
 					"response": []
 				}
-			],
-			"protocolProfileBehavior": {}
+			]
 		},
 		{
 			"name": "Recurring Invoices",
@@ -5162,8 +5119,7 @@
 					},
 					"response": []
 				}
-			],
-			"protocolProfileBehavior": {}
+			]
 		},
 		{
 			"name": "Sales Tax Periods",
@@ -5357,8 +5313,7 @@
 					},
 					"response": []
 				}
-			],
-			"protocolProfileBehavior": {}
+			]
 		},
 		{
 			"name": "Stock Items",
@@ -5439,8 +5394,7 @@
 					},
 					"response": []
 				}
-			],
-			"protocolProfileBehavior": {}
+			]
 		},
 		{
 			"name": "Tasks",
@@ -5671,8 +5625,7 @@
 					},
 					"response": []
 				}
-			],
-			"protocolProfileBehavior": {}
+			]
 		},
 		{
 			"name": "Timeslips",
@@ -5782,9 +5735,7 @@
 							},
 							"response": []
 						}
-					],
-					"protocolProfileBehavior": {},
-					"_postman_isSubFolder": true
+					]
 				},
 				{
 					"name": "List all timeslips",
@@ -6050,8 +6001,7 @@
 					},
 					"response": []
 				}
-			],
-			"protocolProfileBehavior": {}
+			]
 		},
 		{
 			"name": "Trial Balance",
@@ -6135,8 +6085,7 @@
 					},
 					"response": []
 				}
-			],
-			"protocolProfileBehavior": {}
+			]
 		},
 		{
 			"name": "Users",
@@ -6357,13 +6306,67 @@
 					},
 					"response": []
 				}
-			],
-			"protocolProfileBehavior": {}
+			]
 		}
 	],
 	"auth": {
 		"type": "oauth2",
 		"oauth2": [
+			{
+				"key": "headerPrefix",
+				"value": "Bearer",
+				"type": "string"
+			},
+			{
+				"key": "tokenName",
+				"value": "FreeAgent API Token",
+				"type": "string"
+			},
+			{
+				"key": "challengeAlgorithm",
+				"value": "S256",
+				"type": "string"
+			},
+			{
+				"key": "redirect_uri",
+				"value": "https://www.getpostman.com/oauth2/callback",
+				"type": "string"
+			},
+			{
+				"key": "grant_type",
+				"value": "authorization_code",
+				"type": "string"
+			},
+			{
+				"key": "clientSecret",
+				"value": "{{client_secret}}",
+				"type": "string"
+			},
+			{
+				"key": "clientId",
+				"value": "{{client_id}}",
+				"type": "string"
+			},
+			{
+				"key": "authUrl",
+				"value": "{{url}}/v2/approve_app",
+				"type": "string"
+			},
+			{
+				"key": "addTokenTo",
+				"value": "header",
+				"type": "string"
+			},
+			{
+				"key": "client_authentication",
+				"value": "header",
+				"type": "string"
+			},
+			{
+				"key": "accessTokenUrl",
+				"value": "{{url}}/v2/token_endpoint",
+				"type": "string"
+			},
 			{
 				"key": "accessToken",
 				"value": "",
@@ -6373,11 +6376,6 @@
 				"key": "tokenType",
 				"value": "bearer",
 				"type": "string"
-			},
-			{
-				"key": "addTokenTo",
-				"value": "header",
-				"type": "string"
 			}
 		]
 	},
@@ -6385,7 +6383,6 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "a760280f-3c96-412c-a1df-84982cbffe42",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -6395,13 +6392,11 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "acea3d0d-8c44-4b32-bf74-4f98245d3107",
 				"type": "text/javascript",
 				"exec": [
 					""
 				]
 			}
 		}
-	],
-	"protocolProfileBehavior": {}
+	]
 }

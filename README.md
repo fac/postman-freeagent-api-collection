@@ -3,35 +3,18 @@
 Please refer to the official FreeAgent API docs:
 https://dev.freeagent.com/docs
 
-### Get Started - [📺 Video Guide](https://youtu.be/2M182E9Jtmo)
+### Get Started
 
-Import the FreeAgent collection, then import the environments.
+1. Import the FreeAgent collection
 
-Fill in the environment variables for `client_id` and `client_secret` from your app, which you can create via our Developer Dashboard:
+2. Import the environment file(s) for sandbox and/or production. Fill in the environment variables for `client_id`
+and `client_secret` from your app, which you can create via our [Developer Dashboard](https://dev.freeagent.com).
 
+  - Make sure to set the OAuth Redirect URI to: `https://www.getpostman.com/oauth2/callback` when creating your app
+   on Dev Dashboard.
 
-- Developer Dashboard for Production & Sandbox:
-  - Make sure to set the OAuth Redirect URI to: `https://www.getpostman.com/oauth2/callback` when creating your app on Dev Dashboard.
-  - https://dev.freeagent.com
-
-
-Then authorise by
-- going to a request, for example `Company Details`
-- clicking the `Auth` tab, the link to the authorization helper `FreeAgent`
-- Ensure `OAuth 2.0` is selected as the type
-- then fill in this information:
-```
-Token Name: Your Token Name
-Grant Type: Authorization Code
-Callback URL: https://www.getpostman.com/oauth2/callback
-Auth URL: {{url}}/v2/approve_app
-Access Token URL: {{url}}/v2/token_endpoint
-Client ID: {{client_id}}
-Client Secret: {{client_secret}}
-Scope: -
-State: -
-Client Authentication: Send as Basic Auth Header
-```
+3. Then generate an access and refresh tokens by:
+- right-clicking on the collection > Edit > `Authorization`
 - click `Get New Access Token`, signing in with an account for the appropriate environment, then click `Proceed`
 - and finally `Use Token`.
 
