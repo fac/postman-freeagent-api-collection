@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "490be926-6926-48ab-8d95-e2e3d3400648",
+		"_postman_id": "49cbf2c8-6007-4000-a0d9-5892a5d7f909",
 		"name": "FreeAgent",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -1144,6 +1144,60 @@
 								{
 									"key": "id",
 									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Bill Items",
+			"item": [
+				{
+					"name": "List Bill Items",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v2/bill_items?bill={{url}}/v2/bills/6",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v2",
+								"bill_items"
+							],
+							"query": [
+								{
+									"key": "bill",
+									"value": "{{url}}/v2/bills/6"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show Bill Item",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v2/bill_items/:bill_item_id",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v2",
+								"bill_items",
+								":bill_item_id"
+							],
+							"variable": [
+								{
+									"key": "bill_item_id",
+									"value": "2"
 								}
 							]
 						}
