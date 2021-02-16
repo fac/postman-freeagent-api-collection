@@ -10,8 +10,7 @@ https://dev.freeagent.com/docs
 2. Import the environment file(s) for sandbox and/or production. Fill in the environment variables for `client_id`
 and `client_secret` from your app, which you can create via our [Developer Dashboard](https://dev.freeagent.com).
 
-  - Make sure to set the OAuth Redirect URI to: `https://www.getpostman.com/oauth2/callback` when creating your app
-   on Dev Dashboard.
+  - Your app on the Developer Dashboard should list `https://www.getpostman.com/oauth2/callback` as a permitted OAuth Redirect URI (this will be done for you automatically when you create a new app)
 
 3. Then generate an access and refresh tokens by:
 - right-clicking on the collection > Edit > `Authorization`
