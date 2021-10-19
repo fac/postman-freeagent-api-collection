@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "49cbf2c8-6007-4000-a0d9-5892a5d7f909",
+		"_postman_id": "1e60feb6-9c6b-4662-9659-da46b6f806b9",
 		"name": "FreeAgent",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -4792,6 +4792,67 @@
 								{
 									"key": "period",
 									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Payroll Profiles",
+			"item": [
+				{
+					"name": "List all profiles for a given tax year",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v2/payroll_profiles/:year",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v2",
+								"payroll_profiles",
+								":year"
+							],
+							"variable": [
+								{
+									"key": "year",
+									"value": "2022"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Profile for a particular user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v2/payroll_profiles/:year?user={{url}}/v2/users/107",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v2",
+								"payroll_profiles",
+								":year"
+							],
+							"query": [
+								{
+									"key": "user",
+									"value": "{{url}}/v2/users/107"
+								}
+							],
+							"variable": [
+								{
+									"key": "year",
+									"value": "2022"
 								}
 							]
 						}
