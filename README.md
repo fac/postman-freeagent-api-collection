@@ -18,7 +18,7 @@ https://dev.freeagent.com/docs
 
 2. Import the FreeAgent collection
 
-3. Import the environment file(s) for sandbox and/or production (but see [Common Postman Gotchas](#common-postman-gotchas) below). Fill in the environment variables for `client_id`
+3. Import the environment file(s) for sandbox and/or production and/or development (but see [Common Postman Gotchas](#common-postman-gotchas) below). Fill in the environment variables for `client_id`
 and `client_secret` from your app (which you created in step 1).
 
 4. Generate access and refresh tokens by:
